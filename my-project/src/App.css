@@ -1,0 +1,143 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+.hero-section {
+  background-image: url('https://www.thoughtco.com/thmb/0nAR9A5cAVrTg8py3pvLlQlBMnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/world-in-geographic-projection-true-colour-satellite-image-99151124-58b9cc3e5f9b58af5ca7578d.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 2em;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  height: 30vh;
+}
+.city-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.city-card img {
+  width: 100%;
+  height: auto;
+}
+
+.city-card h3 {
+  font-size: 1.5em;
+}
+footer {
+  background-color:black;
+  color: #fff;
+  padding: 20px;
+
+}
+
+.social-media, .contact-info {
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+}
+
+.social-media h3, .contact-info h3 {
+  font-size: 1.5em;
+}
+
+.city-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: space-around; 
+  
+}
+
+.city-card {
+  flex: 0 1 calc(20% - 20px); 
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; 
+  
+}
+
+.city-card:hover {
+  
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.city-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  
+}
+
