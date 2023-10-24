@@ -9,10 +9,7 @@ function Home({ selectedCountry, setSelectedCountry }) {
 
   return (
     <div className="home">
-      <div className="hero-section">
-        <h2>Welcome to Cities of the World</h2>
-        <p>Explore cities from around the globe.</p>
-      </div>
+      
       <div className="country-selector">
         <h2>Select a Country:</h2>
         <select value={selectedCountry} onChange={handleCountryChange}>
