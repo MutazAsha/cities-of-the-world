@@ -1,60 +1,30 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Hedar from './Hedar';
-import Footer from './Footer';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import Cities from './Cities';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Header";
+import Home from "./Components/Home";
+import { About } from "./Components/About";
+import { Pricing } from "./Components/Pricing";
+import Footer from "./Components/Footer";
+
 
 function App() {
-  const [selectedCountry, setSelectedCountry] = useState('');
-
   return (
-    <Router>
-      <div className="App">
-        <Hedar />
+    <>
+      <BrowserRouter>
+        <Navbar />
+        
+
         <Routes>
-          <Route path="/ " element={<Home selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} />} />
-          <Route path="/Cities" element={<Cities selectedCountry={selectedCountry} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Pricing" element={<Pricing />} />
         </Routes>
-        <Footer />
-      </div>
-    </Router>
+        <Footer/>
+      </BrowserRouter>
+
+    </>
   );
 }
+
 export default App;
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import React, { useState } from 'react';
-// import './App.css';
-
-// import Home from './Home';
-// import Cities from './Cities';
-// import Footer from './Footer';
-// import Hedar from './Hedar';
-
-// function App() {
-//   const [selectedCountry, setSelectedCountry] = useState('');
-
-//   return (
-//     <Router>
-//       <div className="App">
-//         <Hedar />
-//         <Switch>
-//           <Route path="/" exact>
-//             <Home selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} />
-//           </Route>
-//           <Route path="/cities">
-//             <Cities selectedCountry={selectedCountry} />
-//           </Route>
-//         </Switch>
-//         
-//         <Footer />
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
